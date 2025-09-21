@@ -10,16 +10,23 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as ProductRouteRouteImport } from './routes/product/route'
 import { Route as ChainRouteRouteImport } from './routes/chain/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PptIndexRouteImport } from './routes/ppt/index'
 import { Route as KisanIndexRouteImport } from './routes/kisan/index'
 import { Route as ChainIndexRouteImport } from './routes/chain/index'
+import { Route as ProductSampleproductRouteImport } from './routes/product/sampleproduct'
 import { Route as ChainLivechainRouteImport } from './routes/chain/livechain'
 
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductRouteRoute = ProductRouteRouteImport.update({
+  id: '/product',
+  path: '/product',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ChainRouteRoute = ChainRouteRouteImport.update({
@@ -47,6 +54,11 @@ const ChainIndexRoute = ChainIndexRouteImport.update({
   path: '/',
   getParentRoute: () => ChainRouteRoute,
 } as any)
+const ProductSampleproductRoute = ProductSampleproductRouteImport.update({
+  id: '/sampleproduct',
+  path: '/sampleproduct',
+  getParentRoute: () => ProductRouteRoute,
+} as any)
 const ChainLivechainRoute = ChainLivechainRouteImport.update({
   id: '/livechain',
   path: '/livechain',
@@ -56,16 +68,20 @@ const ChainLivechainRoute = ChainLivechainRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/chain': typeof ChainRouteRouteWithChildren
+  '/product': typeof ProductRouteRouteWithChildren
   '/about': typeof AboutRoute
   '/chain/livechain': typeof ChainLivechainRoute
+  '/product/sampleproduct': typeof ProductSampleproductRoute
   '/chain/': typeof ChainIndexRoute
   '/kisan': typeof KisanIndexRoute
   '/ppt': typeof PptIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/product': typeof ProductRouteRouteWithChildren
   '/about': typeof AboutRoute
   '/chain/livechain': typeof ChainLivechainRoute
+  '/product/sampleproduct': typeof ProductSampleproductRoute
   '/chain': typeof ChainIndexRoute
   '/kisan': typeof KisanIndexRoute
   '/ppt': typeof PptIndexRoute
@@ -74,8 +90,10 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/chain': typeof ChainRouteRouteWithChildren
+  '/product': typeof ProductRouteRouteWithChildren
   '/about': typeof AboutRoute
   '/chain/livechain': typeof ChainLivechainRoute
+  '/product/sampleproduct': typeof ProductSampleproductRoute
   '/chain/': typeof ChainIndexRoute
   '/kisan/': typeof KisanIndexRoute
   '/ppt/': typeof PptIndexRoute
@@ -85,19 +103,31 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/chain'
+    | '/product'
     | '/about'
     | '/chain/livechain'
+    | '/product/sampleproduct'
     | '/chain/'
     | '/kisan'
     | '/ppt'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/chain/livechain' | '/chain' | '/kisan' | '/ppt'
+  to:
+    | '/'
+    | '/product'
+    | '/about'
+    | '/chain/livechain'
+    | '/product/sampleproduct'
+    | '/chain'
+    | '/kisan'
+    | '/ppt'
   id:
     | '__root__'
     | '/'
     | '/chain'
+    | '/product'
     | '/about'
     | '/chain/livechain'
+    | '/product/sampleproduct'
     | '/chain/'
     | '/kisan/'
     | '/ppt/'
@@ -106,6 +136,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ChainRouteRoute: typeof ChainRouteRouteWithChildren
+  ProductRouteRoute: typeof ProductRouteRouteWithChildren
   AboutRoute: typeof AboutRoute
   KisanIndexRoute: typeof KisanIndexRoute
   PptIndexRoute: typeof PptIndexRoute
@@ -118,6 +149,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/product': {
+      id: '/product'
+      path: '/product'
+      fullPath: '/product'
+      preLoaderRoute: typeof ProductRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/chain': {
@@ -155,6 +193,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChainIndexRouteImport
       parentRoute: typeof ChainRouteRoute
     }
+    '/product/sampleproduct': {
+      id: '/product/sampleproduct'
+      path: '/sampleproduct'
+      fullPath: '/product/sampleproduct'
+      preLoaderRoute: typeof ProductSampleproductRouteImport
+      parentRoute: typeof ProductRouteRoute
+    }
     '/chain/livechain': {
       id: '/chain/livechain'
       path: '/livechain'
@@ -179,9 +224,22 @@ const ChainRouteRouteWithChildren = ChainRouteRoute._addFileChildren(
   ChainRouteRouteChildren,
 )
 
+interface ProductRouteRouteChildren {
+  ProductSampleproductRoute: typeof ProductSampleproductRoute
+}
+
+const ProductRouteRouteChildren: ProductRouteRouteChildren = {
+  ProductSampleproductRoute: ProductSampleproductRoute,
+}
+
+const ProductRouteRouteWithChildren = ProductRouteRoute._addFileChildren(
+  ProductRouteRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ChainRouteRoute: ChainRouteRouteWithChildren,
+  ProductRouteRoute: ProductRouteRouteWithChildren,
   AboutRoute: AboutRoute,
   KisanIndexRoute: KisanIndexRoute,
   PptIndexRoute: PptIndexRoute,
