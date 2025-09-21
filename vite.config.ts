@@ -16,6 +16,12 @@ export default defineConfig({
    
 
   ],
+  build: {
+    outDir: "dist" // Vercel expects this
+  },
+  server: {
+    port: 3000
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
