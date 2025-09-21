@@ -5,12 +5,13 @@ import LanguageSelect from "../custom/LanguageSelect";
 import { Button } from "../ui/button";
 import DropdownMenu from "../custom/DropdownMenu";
 import { useState } from "react";
-import { Link } from "@tanstack/react-router";
+import { Link, useRouter } from "@tanstack/react-router";
 
 
 const Navbar = () => {
 
   const { t } = useTranslation();
+  const router = useRouter()
   
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -54,16 +55,16 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
           <DropdownMenu />
-          <Link to="/" className="font-medium text-sm hover:underline">
+          <Link to="/product/scanqr" className="font-medium text-sm hover:underline">
             {t("navbar.DDScan")}
           </Link>
-          <Link to="/" className="font-medium text-sm hover:underline">
+          <Link to="/product/complaint" className="font-medium text-sm hover:underline">
             {t("navbar.DDcomplain")}
           </Link>
-          <Link to="/" className="font-medium text-sm hover:underline">
+          <Link to="/chain/livechain" className="font-medium text-sm hover:underline">
             {t("navbar.DDHelp")}
           </Link>
-          <Link to="/" className="font-medium text-sm hover:underline">
+          <Link to="/chain" className="font-medium text-sm hover:underline">
             {t("navbar.DDabout")}
           </Link>
          
@@ -91,19 +92,19 @@ const Navbar = () => {
         <div className="absolute top-32 left-0 w-full bg-background shadow-md z-50 flex flex-col gap-4 p-4">
 
           <DropdownMenu isMobile />
-          <Link to="/" className="font-medium hover:underline">
+          <Link to="/product/scanqr" className="font-medium hover:underline">
             {t("navbar.DDScan")}
           </Link>
-          <Link to="/" className="font-medium hover:underline">
+          <Link to="/product/complaint" className="font-medium hover:underline">
             {t("navbar.DDcomplain")}
           </Link>
-          <Link to="/" className="font-medium hover:underline">
+          <Link to="/chain/livechain" className="font-medium hover:underline">
             {t("navbar.DDHelp")}
           </Link>
-          <Link to="/" className="font-medium hover:underline">
+          <Link to="/chain" className="font-medium hover:underline">
             {t("navbar.DDabout")}
           </Link>
-          <Button className="w-full">{t("navbar.NavLoginBtn")}</Button>
+          <Button onClick={()=>router.navigate({ to : "/kisan"})} className="w-full">{t("navbar.NavLoginBtn")}</Button>
         </div>
       )}
         

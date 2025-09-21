@@ -4,6 +4,7 @@ import { type Farmer,type Processor,type LabTest,type Manufacturer } from '../..
 import Accordion from './Accordion';
 import InfoCard from './InfoCard';
 import { LeafIcon, ChevronDownIcon } from './icons';
+import { useTranslation } from 'react-i18next';
 
 interface TraceabilityChainProps {
   farmersByHerb: { [key: string]: Farmer[] };
@@ -20,6 +21,8 @@ const TraceabilityChain: React.FC<TraceabilityChainProps> = ({
 }) => {
   const [selectedHerb, setSelectedHerb] = useState<string | null>(null);
   const ingredients = Object.keys(farmersByHerb);
+
+  const {t } = useTranslation();
 
   const handleSelectHerb = (herb: string) => {
     setSelectedHerb(herb === selectedHerb ? null : herb);
@@ -86,7 +89,7 @@ const TraceabilityChain: React.FC<TraceabilityChainProps> = ({
         </div>
       ) : (
         <div className="text-center py-10 text-gray-500">
-          <p>Please select an ingredient above to view its traceability details.</p>
+          <p>{t("product.noherb")}</p>
         </div>
       )}
     </div>

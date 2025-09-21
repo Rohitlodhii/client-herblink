@@ -21,5 +21,31 @@
         "loading": "जमा किया जा रहा है",
         "refreshcaptcha": "कैप्चा रीफ्रेश करें",
         "enterOtp": "ओटीपी दर्ज करें"
-    }
+    },
+    
+        "complain": {
+          "title": "शिकायत दर्ज करें",
+          "blockchainId": "ब्लॉकचेन आईडी",
+          "blockchainPlaceholder": "उत्पाद पैकेजिंग पर दी गई आईडी दर्ज करें",
+          "type": "शिकायत का प्रकार",
+          "selectCategory": "एक श्रेणी चुनें",
+          "details": "शिकायत का विवरण",
+          "detailsPlaceholder": "कृपया समस्या का यथासंभव विस्तार से वर्णन करें...",
+          "attachImage": "छवि संलग्न करें (वैकल्पिक)",
+          "removeImage": "छवि हटाएँ",
+          "uploadFile": "फ़ाइल अपलोड करें",
+          "changeFile": "फ़ाइल बदलें",
+          "orDragDrop": "या खींचें और छोड़ें",
+          "fileLimit": "PNG, JPG अधिकतम 10MB",
+          "submit": "शिकायत सबमिट करें",
+          "submitting": "सबमिट हो रहा है...",
+          "successMessage": "धन्यवाद! आपकी शिकायत सफलतापूर्वक दर्ज हो गई है।",
+          "options": {
+            "packaging": "पैकेजिंग समस्या",
+            "quality": "उत्पाद की गुणवत्ता",
+            "incorrectInfo": "गलत जानकारी",
+            "allergy": "एलर्जी प्रतिक्रिया",
+            "other": "अन्य"
+          }
+        }
 }

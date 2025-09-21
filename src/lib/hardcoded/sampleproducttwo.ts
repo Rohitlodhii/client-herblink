@@ -2,7 +2,7 @@
 import {type ProductHeader , type Farmer,type Processor,type LabTest,type Manufacturer } from '../../types/producttype';
 
 export const productHeader: ProductHeader = {
-    title: "Sample Toothpaste",
+    title: "Sample Product",
     harvest: "15/09/2025",
     manufacture: "18/09/2025",
     ingredients: ["Tulsi", "Neem", "Ashwagandha"],

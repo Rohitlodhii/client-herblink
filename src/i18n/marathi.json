@@ -21,5 +21,30 @@
         "loading": "सादर करत आहे",
         "refreshcaptcha": "कॅप्चा रीफ्रेश करा",
         "enterOtp": "ओटीपी प्रविष्ट करा"
-    }
+    },
+    "complain": {
+        "title": "तक्रार नोंदवा",
+        "blockchainId": "ब्लॉकचेन आयडी",
+        "blockchainPlaceholder": "उत्पादनाच्या पॅकेजिंगवर दिलेला आयडी प्रविष्ट करा",
+        "type": "तक्रारीचा प्रकार",
+        "selectCategory": "एक श्रेणी निवडा",
+        "details": "तक्रारीचे तपशील",
+        "detailsPlaceholder": "कृपया समस्या शक्य तितक्या तपशीलवार वर्णन करा...",
+        "attachImage": "प्रतिमा जोडा (ऐच्छिक)",
+        "removeImage": "प्रतिमा काढा",
+        "uploadFile": "फाइल अपलोड करा",
+        "changeFile": "फाइल बदला",
+        "orDragDrop": "किंवा ड्रॅग आणि ड्रॉप करा",
+        "fileLimit": "PNG, JPG कमाल 10MB",
+        "submit": "तक्रार सबमिट करा",
+        "submitting": "सबमिट करत आहे...",
+        "successMessage": "धन्यवाद! तुमची तक्रार यशस्वीरित्या नोंदवली गेली आहे.",
+        "options": {
+          "packaging": "पॅकेजिंग समस्या",
+          "quality": "उत्पादनाची गुणवत्ता",
+          "incorrectInfo": "चुकीची माहिती",
+          "allergy": "अॅलर्जी प्रतिक्रिया",
+          "other": "इतर"
+        }
+      }
 }

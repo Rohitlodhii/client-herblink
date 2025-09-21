@@ -16,7 +16,9 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as PptIndexRouteImport } from './routes/ppt/index'
 import { Route as KisanIndexRouteImport } from './routes/kisan/index'
 import { Route as ChainIndexRouteImport } from './routes/chain/index'
+import { Route as ProductScanqrRouteImport } from './routes/product/scanqr'
 import { Route as ProductSampleproductRouteImport } from './routes/product/sampleproduct'
+import { Route as ProductComplaintRouteImport } from './routes/product/complaint'
 import { Route as ChainLivechainRouteImport } from './routes/chain/livechain'
 
 const AboutRoute = AboutRouteImport.update({
@@ -54,9 +56,19 @@ const ChainIndexRoute = ChainIndexRouteImport.update({
   path: '/',
   getParentRoute: () => ChainRouteRoute,
 } as any)
+const ProductScanqrRoute = ProductScanqrRouteImport.update({
+  id: '/scanqr',
+  path: '/scanqr',
+  getParentRoute: () => ProductRouteRoute,
+} as any)
 const ProductSampleproductRoute = ProductSampleproductRouteImport.update({
   id: '/sampleproduct',
   path: '/sampleproduct',
+  getParentRoute: () => ProductRouteRoute,
+} as any)
+const ProductComplaintRoute = ProductComplaintRouteImport.update({
+  id: '/complaint',
+  path: '/complaint',
   getParentRoute: () => ProductRouteRoute,
 } as any)
 const ChainLivechainRoute = ChainLivechainRouteImport.update({
@@ -71,7 +83,9 @@ export interface FileRoutesByFullPath {
   '/product': typeof ProductRouteRouteWithChildren
   '/about': typeof AboutRoute
   '/chain/livechain': typeof ChainLivechainRoute
+  '/product/complaint': typeof ProductComplaintRoute
   '/product/sampleproduct': typeof ProductSampleproductRoute
+  '/product/scanqr': typeof ProductScanqrRoute
   '/chain/': typeof ChainIndexRoute
   '/kisan': typeof KisanIndexRoute
   '/ppt': typeof PptIndexRoute
@@ -81,7 +95,9 @@ export interface FileRoutesByTo {
   '/product': typeof ProductRouteRouteWithChildren
   '/about': typeof AboutRoute
   '/chain/livechain': typeof ChainLivechainRoute
+  '/product/complaint': typeof ProductComplaintRoute
   '/product/sampleproduct': typeof ProductSampleproductRoute
+  '/product/scanqr': typeof ProductScanqrRoute
   '/chain': typeof ChainIndexRoute
   '/kisan': typeof KisanIndexRoute
   '/ppt': typeof PptIndexRoute
@@ -93,7 +109,9 @@ export interface FileRoutesById {
   '/product': typeof ProductRouteRouteWithChildren
   '/about': typeof AboutRoute
   '/chain/livechain': typeof ChainLivechainRoute
+  '/product/complaint': typeof ProductComplaintRoute
   '/product/sampleproduct': typeof ProductSampleproductRoute
+  '/product/scanqr': typeof ProductScanqrRoute
   '/chain/': typeof ChainIndexRoute
   '/kisan/': typeof KisanIndexRoute
   '/ppt/': typeof PptIndexRoute
@@ -106,7 +124,9 @@ export interface FileRouteTypes {
     | '/product'
     | '/about'
     | '/chain/livechain'
+    | '/product/complaint'
     | '/product/sampleproduct'
+    | '/product/scanqr'
     | '/chain/'
     | '/kisan'
     | '/ppt'
@@ -116,7 +136,9 @@ export interface FileRouteTypes {
     | '/product'
     | '/about'
     | '/chain/livechain'
+    | '/product/complaint'
     | '/product/sampleproduct'
+    | '/product/scanqr'
     | '/chain'
     | '/kisan'
     | '/ppt'
@@ -127,7 +149,9 @@ export interface FileRouteTypes {
     | '/product'
     | '/about'
     | '/chain/livechain'
+    | '/product/complaint'
     | '/product/sampleproduct'
+    | '/product/scanqr'
     | '/chain/'
     | '/kisan/'
     | '/ppt/'
@@ -193,11 +217,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChainIndexRouteImport
       parentRoute: typeof ChainRouteRoute
     }
+    '/product/scanqr': {
+      id: '/product/scanqr'
+      path: '/scanqr'
+      fullPath: '/product/scanqr'
+      preLoaderRoute: typeof ProductScanqrRouteImport
+      parentRoute: typeof ProductRouteRoute
+    }
     '/product/sampleproduct': {
       id: '/product/sampleproduct'
       path: '/sampleproduct'
       fullPath: '/product/sampleproduct'
       preLoaderRoute: typeof ProductSampleproductRouteImport
+      parentRoute: typeof ProductRouteRoute
+    }
+    '/product/complaint': {
+      id: '/product/complaint'
+      path: '/complaint'
+      fullPath: '/product/complaint'
+      preLoaderRoute: typeof ProductComplaintRouteImport
       parentRoute: typeof ProductRouteRoute
     }
     '/chain/livechain': {
@@ -225,11 +263,15 @@ const ChainRouteRouteWithChildren = ChainRouteRoute._addFileChildren(
 )
 
 interface ProductRouteRouteChildren {
+  ProductComplaintRoute: typeof ProductComplaintRoute
   ProductSampleproductRoute: typeof ProductSampleproductRoute
+  ProductScanqrRoute: typeof ProductScanqrRoute
 }
 
 const ProductRouteRouteChildren: ProductRouteRouteChildren = {
+  ProductComplaintRoute: ProductComplaintRoute,
   ProductSampleproductRoute: ProductSampleproductRoute,
+  ProductScanqrRoute: ProductScanqrRoute,
 }
 
 const ProductRouteRouteWithChildren = ProductRouteRoute._addFileChildren(

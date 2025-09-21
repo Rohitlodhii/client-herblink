@@ -8,8 +8,8 @@
         "ddorgs2" : "Processor Portal",
         "ddorgs3" : "Lab Portal",
         "ddorgs4" : "Manufacturer Portal",
-        "DDabout" : "About",
-        "DDHelp" : "Help",
+        "DDabout" : "Search ID",
+        "DDHelp" : "See Chain",
         "DDScan" : "Scan Product",
         "DDcomplain" : "Complain"
     },
@@ -32,7 +32,35 @@
     "about" :  {
         "title" :"HerbLink",
         "para": "HerbLink is an innovative blockchain-powered platform created to solve one of the most pressing challenges in the Ayurvedic industry—trust.\nToday, consumers often face uncertainty when it comes to the authenticity, purity, and safety of herbal products.\nIssues such as unverified sourcing, unsafe farming practices with hidden chemical usage, lack of lab-based quality data, and unreliable supply chains put both consumer health and the credibility of Ayurveda at risk.\nManufacturers, too, face difficulties in ensuring their herbs are genuinely pure and ethically sourced, leading to compromised products reaching the market.\n\nHerbLink steps in as a complete traceability and transparency solution.\nEvery product integrated into our system comes with a unique QR code, which, when scanned, reveals the entire journey of the herb—from the farmer who cultivated it, to the lab where it was tested, to the manufacturer who prepared the final product.\nThis journey is not just a story, but a verified chain of data stored securely on a tamper-proof blockchain ledger.\nThis means no third party can manipulate or hide information, ensuring that consumers always receive reliable and truthful insights.\n\nBeyond traceability, HerbLink ensures authentication at every stage of the process.\nFarmers, labs, and manufacturers are verified through our authority-backed system, with additional support from SMS gateways to confirm authenticity.\nThis eliminates the risk of herbs being sourced from unreliable suppliers and guarantees that only verified, safe, and pure products reach the consumer.\n\nMost importantly, HerbLink brings clarity and confidence to a space that desperately needs it.\nBy making the entire process transparent, we empower consumers to make informed health decisions while giving farmers and manufacturers a chance to build genuine credibility in the global market.\nWith HerbLink, Ayurveda can stay true to its roots of natural healing—restoring trust, safety, and purity in every herb that reaches your hands."
-      }
-      
+      },
+    "product" : {
+        "noherb" : "Please select any herb above to view details"
+    },
+    "complain": {
+    "title": "File a Complaint",
+    "blockchainId": "Blockchain ID",
+    "blockchainPlaceholder": "Enter the ID found on the product packaging",
+    "type": "Type of Complaint",
+    "selectCategory": "Select a category",
+    "details": "Complaint Details",
+    "detailsPlaceholder": "Please describe the issue in as much detail as possible...",
+    "attachImage": "Attach an Image (optional)",
+    "removeImage": "Remove image",
+    "uploadFile": "Upload a file",
+    "changeFile": "Change file",
+    "orDragDrop": "or drag and drop",
+    "fileLimit": "PNG, JPG up to 10MB",
+    "submit": "Submit Complaint",
+    "submitting": "Submitting...",
+    "successMessage": "Thank you! Your complaint has been submitted successfully.",
+    "options": {
+      "packaging": "Packaging Issue",
+      "quality": "Product Quality",
+      "incorrectInfo": "Incorrect Information",
+      "allergy": "Allergic Reaction",
+      "other": "Other"
+    }
+  }
+    
 
 }
