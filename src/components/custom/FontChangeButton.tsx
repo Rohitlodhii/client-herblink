@@ -1,4 +1,4 @@
-import { useFontSize } from "../../hook/fontsize";
+
 import { useFontSizeContext } from "../context/FontSizeContext";
 
 export default function FontSizeButtons() {

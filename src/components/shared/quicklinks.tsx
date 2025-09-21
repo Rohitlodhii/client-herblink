@@ -1,5 +1,4 @@
-import React from "react";
-import { useFontSize } from "../../hook/fontsize";
+
 import { useFontSizeContext } from "../context/FontSizeContext";
 import { QuickLinks } from "../../lib/quicklink";
 import { useTranslation } from "react-i18next";

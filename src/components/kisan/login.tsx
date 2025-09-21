@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
 import { useNavigate } from "@tanstack/react-router";
- // 👈 if using tanstack router, replace with its navigate
+
 
 const KisanLoginCard = () => {
   const { t } = useTranslation();
