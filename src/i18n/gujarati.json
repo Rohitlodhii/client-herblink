@@ -1,0 +1,25 @@
+{
+    "navbar": {
+        "accessBarHeaderLeft": "ભારત સરકાર",
+        "accessBarRightSkipButton": "મુખ્ય સામગ્રી પર જાઓ",
+        "NavLoginBtn": "લૉગિન",
+        "DDOrgs": "સંસ્થાઓ",
+        "ddorgs1": "ખેડૂત પોર્ટલ",
+        "ddorgs2": "પ્રોસેસર પોર્ટલ",
+        "ddorgs3": "લેબ પોર્ટલ",
+        "ddorgs4": "ઉત્પાદક પોર્ટલ",
+        "DDabout": "વિશે",
+        "DDHelp": "મદદ",
+        "DDScan": "ઉત્પાદન સ્કેન કરો",
+        "DDcomplain": "ફરિયાદ"
+    },
+    "kisanlogincard": {
+        "title": "મોબાઇલ નંબરથી લૉગિન કરો",
+        "mobinput": "મોબાઇલ નંબર દાખલ કરો",
+        "submitbtn": "સબમિટ કરો",
+        "captcha": "કૃપા કરીને કેપ્ચા ભરો",
+        "loading": "સબમિટ થઈ રહ્યું છે",
+        "refreshcaptcha": "કેપ્ચા રિફ્રેશ કરો",
+        "enterOtp": "ઓટીપી દાખલ કરો"
+    }
+}

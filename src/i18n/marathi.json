@@ -1,0 +1,25 @@
+{
+    "navbar": {
+        "accessBarHeaderLeft": "भारत सरकार",
+        "accessBarRightSkipButton": "मुख्य सामग्रीवर जा",
+        "NavLoginBtn": "लॉग इन करा",
+        "DDOrgs": "संस्था",
+        "ddorgs1": "शेतकरी पोर्टल",
+        "ddorgs2": "प्रोसेसर पोर्टल",
+        "ddorgs3": "लॅब पोर्टल",
+        "ddorgs4": "उत्पादक पोर्टल",
+        "DDabout": "माहिती",
+        "DDHelp": "मदत",
+        "DDScan": "उत्पादन स्कॅन करा",
+        "DDcomplain": "तक्रार"
+    },
+    "kisanlogincard": {
+        "title": "मोबाइल नंबरसह लॉग इन करा",
+        "mobinput": "मोबाइल नंबर प्रविष्ट करा",
+        "submitbtn": "सादर करा",
+        "captcha": "कृपया कॅप्चा भरा",
+        "loading": "सादर करत आहे",
+        "refreshcaptcha": "कॅप्चा रीफ्रेश करा",
+        "enterOtp": "ओटीपी प्रविष्ट करा"
+    }
+}

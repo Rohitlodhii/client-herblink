@@ -1,0 +1,25 @@
+{
+    "navbar": {
+        "accessBarHeaderLeft": "ভারত সরকার",
+        "accessBarRightSkipButton": "মূল বিষয়বস্তুতে যান",
+        "NavLoginBtn": "লগইন করুন",
+        "DDOrgs": "সংস্থাগুলি",
+        "ddorgs1": "কৃষক পোর্টাল",
+        "ddorgs2": "প্রসেসর পোর্টাল",
+        "ddorgs3": "ল্যাব পোর্টাল",
+        "ddorgs4": "উৎপাদনকারী পোর্টাল",
+        "DDabout": "সম্পর্কে",
+        "DDHelp": "সহায়তা",
+        "DDScan": "পণ্য স্ক্যান করুন",
+        "DDcomplain": "অভিযোগ"
+    },
+    "kisanlogincard": {
+        "title": "মোবাইল নম্বর দিয়ে লগইন করুন",
+        "mobinput": "মোবাইল নম্বর লিখুন",
+        "submitbtn": "জমা দিন",
+        "captcha": "অনুগ্রহ করে ক্যাপচা পূরণ করুন",
+        "loading": "জমা দেওয়া হচ্ছে",
+        "refreshcaptcha": "ক্যাপচা রিফ্রেশ করুন",
+        "enterOtp": "ওটিপি লিখুন"
+    }
+}

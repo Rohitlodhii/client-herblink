@@ -1,0 +1,25 @@
+{
+    "navbar": {
+        "accessBarHeaderLeft": "ಭಾರತ ಸರ್ಕಾರ",
+        "accessBarRightSkipButton": "ಮುಖ್ಯ ವಿಷಯಕ್ಕೆ ತೆರಳಿ",
+        "NavLoginBtn": "ಲಾಗಿನ್",
+        "DDOrgs": "ಸಂಸ್ಥೆಗಳು",
+        "ddorgs1": "ರೈತರ ಪೋರ್ಟಲ್",
+        "ddorgs2": "ಸಂಸ್ಕಾರಕ ಪೋರ್ಟಲ್",
+        "ddorgs3": "ಪ್ರಯೋಗಾಲಯ ಪೋರ್ಟಲ್",
+        "ddorgs4": "ತಯಾರಕರ ಪೋರ್ಟಲ್",
+        "DDabout": "ಕುರಿತು",
+        "DDHelp": "ಸಹಾಯ",
+        "DDScan": "ಉತ್ಪನ್ನವನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ",
+        "DDcomplain": "ದೂರು"
+    },
+    "kisanlogincard": {
+        "title": "ಮೊಬೈಲ್ ಸಂಖ್ಯೆಯೊಂದಿಗೆ ಲಾಗಿನ್ ಮಾಡಿ",
+        "mobinput": "ಮೊಬೈಲ್ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ",
+        "submitbtn": "ಸಲ್ಲಿಸಿ",
+        "captcha": "ದಯವಿಟ್ಟು ಕ್ಯಾಪ್ಚಾ ಭರ್ತಿ ಮಾಡಿ",
+        "loading": "ಸಲ್ಲಿಸಲಾಗುತ್ತಿದೆ",
+        "refreshcaptcha": "ಕ್ಯಾಪ್ಚಾವನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಿ",
+        "enterOtp": "ಓಟಿಪಿ ನಮೂದಿಸಿ"
+    }
+}

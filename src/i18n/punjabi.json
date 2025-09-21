@@ -1,0 +1,25 @@
+{
+    "navbar": {
+        "accessBarHeaderLeft": "ਭਾਰਤ ਸਰਕਾਰ",
+        "accessBarRightSkipButton": "ਮੁੱਖ ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ",
+        "NavLoginBtn": "ਲਾਗਇਨ",
+        "DDOrgs": "ਸੰਗਠਨਾਂ",
+        "ddorgs1": "ਕਿਸਾਨ ਪੋਰਟਲ",
+        "ddorgs2": "ਪ੍ਰੋਸੈਸਰ ਪੋਰਟਲ",
+        "ddorgs3": "ਲੈਬ ਪੋਰਟਲ",
+        "ddorgs4": "ਨਿਰਮਾਤਾ ਪੋਰਟਲ",
+        "DDabout": "ਬਾਰੇ",
+        "DDHelp": "ਮਦਦ",
+        "DDScan": "ਉਤਪਾਦ ਸਕੈਨ ਕਰੋ",
+        "DDcomplain": "ਸ਼ਿਕਾਇਤ"
+    },
+    "kisanlogincard": {
+        "title": "ਮੋਬਾਈਲ ਨੰਬਰ ਨਾਲ ਲਾਗਇਨ ਕਰੋ",
+        "mobinput": "ਮੋਬਾਈਲ ਨੰਬਰ ਦਾਖਲ ਕਰੋ",
+        "submitbtn": "ਜਮ੍ਹਾ ਕਰੋ",
+        "captcha": "ਕਿਰਪਾ ਕਰਕੇ ਕੈਪਚਾ ਭਰੋ",
+        "loading": "ਜਮ੍ਹਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ",
+        "refreshcaptcha": "ਕੈਪਚਾ ਤਾਜ਼ਾ ਕਰੋ",
+        "enterOtp": "ਓਟੀਪੀ ਦਾਖਲ ਕਰੋ"
+    }
+}

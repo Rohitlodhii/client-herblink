@@ -1,0 +1,25 @@
+{
+    "navbar": {
+        "accessBarHeaderLeft": "भारत सरकार",
+        "accessBarRightSkipButton": "मुख्य सामग्री पर जाएं",
+        "NavLoginBtn": "लॉग इन करें",
+        "DDOrgs": "संगठन",
+        "ddorgs1": "किसान पोर्टल",
+        "ddorgs2": "प्रोसेसर पोर्टल",
+        "ddorgs3": "लैब पोर्टल",
+        "ddorgs4": "विनिर्माता पोर्टल",
+        "DDabout": "के बारे में",
+        "DDHelp": "मदद",
+        "DDScan": "उत्पाद स्कैन करें",
+        "DDcomplain": "शिकायत"
+    },
+    "kisanlogincard": {
+        "title": "मोबाइल नंबर से लॉग इन करें",
+        "mobinput": "मोबाइल नंबर दर्ज करें",
+        "submitbtn": "जमा करें",
+        "captcha": "कृपया कैप्चा भरें",
+        "loading": "जमा किया जा रहा है",
+        "refreshcaptcha": "कैप्चा रीफ्रेश करें",
+        "enterOtp": "ओटीपी दर्ज करें"
+    }
+}
