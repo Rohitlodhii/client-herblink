@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import Navbar from '../../components/shared/Navbar'
 import KisanLandingPage from '../../components/kisan/landing'
+import Footer from '../../components/shared/Footer'
 
 export const Route = createFileRoute('/kisan/')({
   component: RouteComponent,
@@ -13,5 +14,6 @@ function RouteComponent() {
       Kisan Portal
     </div>
     <KisanLandingPage/>
+    <Footer/>
   </div>
 }

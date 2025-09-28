@@ -71,12 +71,13 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex">
-        <Button>{t("navbar.NavLoginBtn")}</Button>
+        <Button   onClick={()=>router.navigate({ to : "/adminlogin"})}>{t("navbar.NavLoginBtn")}</Button>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button
+        
             className="text-3xl font-bold"
             onClick={() => setMenuOpen(!menuOpen)}
           >
@@ -104,7 +105,7 @@ const Navbar = () => {
           <Link to="/chain" className="font-medium hover:underline">
             {t("navbar.DDabout")}
           </Link>
-          <Button onClick={()=>router.navigate({ to : "/kisan"})} className="w-full">{t("navbar.NavLoginBtn")}</Button>
+          <Button onClick={()=>router.navigate({ to : "/adminlogin"})} className="w-full">{t("navbar.NavLoginBtn")}</Button>
         </div>
       )}
         

@@ -9,26 +9,53 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as AboutRouteImport } from './routes/about'
+import { Route as WorkingRouteImport } from './routes/working'
+import { Route as AdminloginRouteImport } from './routes/adminlogin'
 import { Route as ProductRouteRouteImport } from './routes/product/route'
+import { Route as ProcessorRouteRouteImport } from './routes/processor/route'
+import { Route as ManufacturerRouteRouteImport } from './routes/manufacturer/route'
 import { Route as ChainRouteRouteImport } from './routes/chain/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProcessorIndexRouteImport } from './routes/processor/index'
 import { Route as PptIndexRouteImport } from './routes/ppt/index'
+import { Route as ManufacturerIndexRouteImport } from './routes/manufacturer/index'
+import { Route as LabIndexRouteImport } from './routes/lab/index'
 import { Route as KisanIndexRouteImport } from './routes/kisan/index'
 import { Route as ChainIndexRouteImport } from './routes/chain/index'
 import { Route as ProductScanqrRouteImport } from './routes/product/scanqr'
 import { Route as ProductSampleproductRouteImport } from './routes/product/sampleproduct'
 import { Route as ProductComplaintRouteImport } from './routes/product/complaint'
+import { Route as ProcessorVerifyOtpRouteImport } from './routes/processor/verify-otp'
+import { Route as ProcessorLoginRouteImport } from './routes/processor/login'
+import { Route as ProcessorDashboardRouteImport } from './routes/processor/dashboard'
+import { Route as ManufacturerVerifyOtpRouteImport } from './routes/manufacturer/verify-otp'
+import { Route as ManufacturerLoginRouteImport } from './routes/manufacturer/login'
+import { Route as ManufacturerDashboardRouteImport } from './routes/manufacturer/dashboard'
 import { Route as ChainLivechainRouteImport } from './routes/chain/livechain'
 
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
+const WorkingRoute = WorkingRouteImport.update({
+  id: '/working',
+  path: '/working',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminloginRoute = AdminloginRouteImport.update({
+  id: '/adminlogin',
+  path: '/adminlogin',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProductRouteRoute = ProductRouteRouteImport.update({
   id: '/product',
   path: '/product',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProcessorRouteRoute = ProcessorRouteRouteImport.update({
+  id: '/processor',
+  path: '/processor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ManufacturerRouteRoute = ManufacturerRouteRouteImport.update({
+  id: '/manufacturer',
+  path: '/manufacturer',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ChainRouteRoute = ChainRouteRouteImport.update({
@@ -41,9 +68,24 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProcessorIndexRoute = ProcessorIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ProcessorRouteRoute,
+} as any)
 const PptIndexRoute = PptIndexRouteImport.update({
   id: '/ppt/',
   path: '/ppt/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ManufacturerIndexRoute = ManufacturerIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ManufacturerRouteRoute,
+} as any)
+const LabIndexRoute = LabIndexRouteImport.update({
+  id: '/lab/',
+  path: '/lab/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KisanIndexRoute = KisanIndexRouteImport.update({
@@ -71,6 +113,36 @@ const ProductComplaintRoute = ProductComplaintRouteImport.update({
   path: '/complaint',
   getParentRoute: () => ProductRouteRoute,
 } as any)
+const ProcessorVerifyOtpRoute = ProcessorVerifyOtpRouteImport.update({
+  id: '/verify-otp',
+  path: '/verify-otp',
+  getParentRoute: () => ProcessorRouteRoute,
+} as any)
+const ProcessorLoginRoute = ProcessorLoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => ProcessorRouteRoute,
+} as any)
+const ProcessorDashboardRoute = ProcessorDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => ProcessorRouteRoute,
+} as any)
+const ManufacturerVerifyOtpRoute = ManufacturerVerifyOtpRouteImport.update({
+  id: '/verify-otp',
+  path: '/verify-otp',
+  getParentRoute: () => ManufacturerRouteRoute,
+} as any)
+const ManufacturerLoginRoute = ManufacturerLoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => ManufacturerRouteRoute,
+} as any)
+const ManufacturerDashboardRoute = ManufacturerDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => ManufacturerRouteRoute,
+} as any)
 const ChainLivechainRoute = ChainLivechainRouteImport.update({
   id: '/livechain',
   path: '/livechain',
@@ -80,99 +152,178 @@ const ChainLivechainRoute = ChainLivechainRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/chain': typeof ChainRouteRouteWithChildren
+  '/manufacturer': typeof ManufacturerRouteRouteWithChildren
+  '/processor': typeof ProcessorRouteRouteWithChildren
   '/product': typeof ProductRouteRouteWithChildren
-  '/about': typeof AboutRoute
+  '/adminlogin': typeof AdminloginRoute
+  '/working': typeof WorkingRoute
   '/chain/livechain': typeof ChainLivechainRoute
+  '/manufacturer/dashboard': typeof ManufacturerDashboardRoute
+  '/manufacturer/login': typeof ManufacturerLoginRoute
+  '/manufacturer/verify-otp': typeof ManufacturerVerifyOtpRoute
+  '/processor/dashboard': typeof ProcessorDashboardRoute
+  '/processor/login': typeof ProcessorLoginRoute
+  '/processor/verify-otp': typeof ProcessorVerifyOtpRoute
   '/product/complaint': typeof ProductComplaintRoute
   '/product/sampleproduct': typeof ProductSampleproductRoute
   '/product/scanqr': typeof ProductScanqrRoute
   '/chain/': typeof ChainIndexRoute
   '/kisan': typeof KisanIndexRoute
+  '/lab': typeof LabIndexRoute
+  '/manufacturer/': typeof ManufacturerIndexRoute
   '/ppt': typeof PptIndexRoute
+  '/processor/': typeof ProcessorIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/product': typeof ProductRouteRouteWithChildren
-  '/about': typeof AboutRoute
+  '/adminlogin': typeof AdminloginRoute
+  '/working': typeof WorkingRoute
   '/chain/livechain': typeof ChainLivechainRoute
+  '/manufacturer/dashboard': typeof ManufacturerDashboardRoute
+  '/manufacturer/login': typeof ManufacturerLoginRoute
+  '/manufacturer/verify-otp': typeof ManufacturerVerifyOtpRoute
+  '/processor/dashboard': typeof ProcessorDashboardRoute
+  '/processor/login': typeof ProcessorLoginRoute
+  '/processor/verify-otp': typeof ProcessorVerifyOtpRoute
   '/product/complaint': typeof ProductComplaintRoute
   '/product/sampleproduct': typeof ProductSampleproductRoute
   '/product/scanqr': typeof ProductScanqrRoute
   '/chain': typeof ChainIndexRoute
   '/kisan': typeof KisanIndexRoute
+  '/lab': typeof LabIndexRoute
+  '/manufacturer': typeof ManufacturerIndexRoute
   '/ppt': typeof PptIndexRoute
+  '/processor': typeof ProcessorIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/chain': typeof ChainRouteRouteWithChildren
+  '/manufacturer': typeof ManufacturerRouteRouteWithChildren
+  '/processor': typeof ProcessorRouteRouteWithChildren
   '/product': typeof ProductRouteRouteWithChildren
-  '/about': typeof AboutRoute
+  '/adminlogin': typeof AdminloginRoute
+  '/working': typeof WorkingRoute
   '/chain/livechain': typeof ChainLivechainRoute
+  '/manufacturer/dashboard': typeof ManufacturerDashboardRoute
+  '/manufacturer/login': typeof ManufacturerLoginRoute
+  '/manufacturer/verify-otp': typeof ManufacturerVerifyOtpRoute
+  '/processor/dashboard': typeof ProcessorDashboardRoute
+  '/processor/login': typeof ProcessorLoginRoute
+  '/processor/verify-otp': typeof ProcessorVerifyOtpRoute
   '/product/complaint': typeof ProductComplaintRoute
   '/product/sampleproduct': typeof ProductSampleproductRoute
   '/product/scanqr': typeof ProductScanqrRoute
   '/chain/': typeof ChainIndexRoute
   '/kisan/': typeof KisanIndexRoute
+  '/lab/': typeof LabIndexRoute
+  '/manufacturer/': typeof ManufacturerIndexRoute
   '/ppt/': typeof PptIndexRoute
+  '/processor/': typeof ProcessorIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/chain'
+    | '/manufacturer'
+    | '/processor'
     | '/product'
-    | '/about'
+    | '/adminlogin'
+    | '/working'
     | '/chain/livechain'
+    | '/manufacturer/dashboard'
+    | '/manufacturer/login'
+    | '/manufacturer/verify-otp'
+    | '/processor/dashboard'
+    | '/processor/login'
+    | '/processor/verify-otp'
     | '/product/complaint'
     | '/product/sampleproduct'
     | '/product/scanqr'
     | '/chain/'
     | '/kisan'
+    | '/lab'
+    | '/manufacturer/'
     | '/ppt'
+    | '/processor/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/product'
-    | '/about'
+    | '/adminlogin'
+    | '/working'
     | '/chain/livechain'
+    | '/manufacturer/dashboard'
+    | '/manufacturer/login'
+    | '/manufacturer/verify-otp'
+    | '/processor/dashboard'
+    | '/processor/login'
+    | '/processor/verify-otp'
     | '/product/complaint'
     | '/product/sampleproduct'
     | '/product/scanqr'
     | '/chain'
     | '/kisan'
+    | '/lab'
+    | '/manufacturer'
     | '/ppt'
+    | '/processor'
   id:
     | '__root__'
     | '/'
     | '/chain'
+    | '/manufacturer'
+    | '/processor'
     | '/product'
-    | '/about'
+    | '/adminlogin'
+    | '/working'
     | '/chain/livechain'
+    | '/manufacturer/dashboard'
+    | '/manufacturer/login'
+    | '/manufacturer/verify-otp'
+    | '/processor/dashboard'
+    | '/processor/login'
+    | '/processor/verify-otp'
     | '/product/complaint'
     | '/product/sampleproduct'
     | '/product/scanqr'
     | '/chain/'
     | '/kisan/'
+    | '/lab/'
+    | '/manufacturer/'
     | '/ppt/'
+    | '/processor/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ChainRouteRoute: typeof ChainRouteRouteWithChildren
+  ManufacturerRouteRoute: typeof ManufacturerRouteRouteWithChildren
+  ProcessorRouteRoute: typeof ProcessorRouteRouteWithChildren
   ProductRouteRoute: typeof ProductRouteRouteWithChildren
-  AboutRoute: typeof AboutRoute
+  AdminloginRoute: typeof AdminloginRoute
+  WorkingRoute: typeof WorkingRoute
   KisanIndexRoute: typeof KisanIndexRoute
+  LabIndexRoute: typeof LabIndexRoute
   PptIndexRoute: typeof PptIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
+    '/working': {
+      id: '/working'
+      path: '/working'
+      fullPath: '/working'
+      preLoaderRoute: typeof WorkingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/adminlogin': {
+      id: '/adminlogin'
+      path: '/adminlogin'
+      fullPath: '/adminlogin'
+      preLoaderRoute: typeof AdminloginRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/product': {
@@ -180,6 +331,20 @@ declare module '@tanstack/react-router' {
       path: '/product'
       fullPath: '/product'
       preLoaderRoute: typeof ProductRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/processor': {
+      id: '/processor'
+      path: '/processor'
+      fullPath: '/processor'
+      preLoaderRoute: typeof ProcessorRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manufacturer': {
+      id: '/manufacturer'
+      path: '/manufacturer'
+      fullPath: '/manufacturer'
+      preLoaderRoute: typeof ManufacturerRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/chain': {
@@ -196,11 +361,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/processor/': {
+      id: '/processor/'
+      path: '/'
+      fullPath: '/processor/'
+      preLoaderRoute: typeof ProcessorIndexRouteImport
+      parentRoute: typeof ProcessorRouteRoute
+    }
     '/ppt/': {
       id: '/ppt/'
       path: '/ppt'
       fullPath: '/ppt'
       preLoaderRoute: typeof PptIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manufacturer/': {
+      id: '/manufacturer/'
+      path: '/'
+      fullPath: '/manufacturer/'
+      preLoaderRoute: typeof ManufacturerIndexRouteImport
+      parentRoute: typeof ManufacturerRouteRoute
+    }
+    '/lab/': {
+      id: '/lab/'
+      path: '/lab'
+      fullPath: '/lab'
+      preLoaderRoute: typeof LabIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kisan/': {
@@ -238,6 +424,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductComplaintRouteImport
       parentRoute: typeof ProductRouteRoute
     }
+    '/processor/verify-otp': {
+      id: '/processor/verify-otp'
+      path: '/verify-otp'
+      fullPath: '/processor/verify-otp'
+      preLoaderRoute: typeof ProcessorVerifyOtpRouteImport
+      parentRoute: typeof ProcessorRouteRoute
+    }
+    '/processor/login': {
+      id: '/processor/login'
+      path: '/login'
+      fullPath: '/processor/login'
+      preLoaderRoute: typeof ProcessorLoginRouteImport
+      parentRoute: typeof ProcessorRouteRoute
+    }
+    '/processor/dashboard': {
+      id: '/processor/dashboard'
+      path: '/dashboard'
+      fullPath: '/processor/dashboard'
+      preLoaderRoute: typeof ProcessorDashboardRouteImport
+      parentRoute: typeof ProcessorRouteRoute
+    }
+    '/manufacturer/verify-otp': {
+      id: '/manufacturer/verify-otp'
+      path: '/verify-otp'
+      fullPath: '/manufacturer/verify-otp'
+      preLoaderRoute: typeof ManufacturerVerifyOtpRouteImport
+      parentRoute: typeof ManufacturerRouteRoute
+    }
+    '/manufacturer/login': {
+      id: '/manufacturer/login'
+      path: '/login'
+      fullPath: '/manufacturer/login'
+      preLoaderRoute: typeof ManufacturerLoginRouteImport
+      parentRoute: typeof ManufacturerRouteRoute
+    }
+    '/manufacturer/dashboard': {
+      id: '/manufacturer/dashboard'
+      path: '/dashboard'
+      fullPath: '/manufacturer/dashboard'
+      preLoaderRoute: typeof ManufacturerDashboardRouteImport
+      parentRoute: typeof ManufacturerRouteRoute
+    }
     '/chain/livechain': {
       id: '/chain/livechain'
       path: '/livechain'
@@ -262,6 +490,41 @@ const ChainRouteRouteWithChildren = ChainRouteRoute._addFileChildren(
   ChainRouteRouteChildren,
 )
 
+interface ManufacturerRouteRouteChildren {
+  ManufacturerDashboardRoute: typeof ManufacturerDashboardRoute
+  ManufacturerLoginRoute: typeof ManufacturerLoginRoute
+  ManufacturerVerifyOtpRoute: typeof ManufacturerVerifyOtpRoute
+  ManufacturerIndexRoute: typeof ManufacturerIndexRoute
+}
+
+const ManufacturerRouteRouteChildren: ManufacturerRouteRouteChildren = {
+  ManufacturerDashboardRoute: ManufacturerDashboardRoute,
+  ManufacturerLoginRoute: ManufacturerLoginRoute,
+  ManufacturerVerifyOtpRoute: ManufacturerVerifyOtpRoute,
+  ManufacturerIndexRoute: ManufacturerIndexRoute,
+}
+
+const ManufacturerRouteRouteWithChildren =
+  ManufacturerRouteRoute._addFileChildren(ManufacturerRouteRouteChildren)
+
+interface ProcessorRouteRouteChildren {
+  ProcessorDashboardRoute: typeof ProcessorDashboardRoute
+  ProcessorLoginRoute: typeof ProcessorLoginRoute
+  ProcessorVerifyOtpRoute: typeof ProcessorVerifyOtpRoute
+  ProcessorIndexRoute: typeof ProcessorIndexRoute
+}
+
+const ProcessorRouteRouteChildren: ProcessorRouteRouteChildren = {
+  ProcessorDashboardRoute: ProcessorDashboardRoute,
+  ProcessorLoginRoute: ProcessorLoginRoute,
+  ProcessorVerifyOtpRoute: ProcessorVerifyOtpRoute,
+  ProcessorIndexRoute: ProcessorIndexRoute,
+}
+
+const ProcessorRouteRouteWithChildren = ProcessorRouteRoute._addFileChildren(
+  ProcessorRouteRouteChildren,
+)
+
 interface ProductRouteRouteChildren {
   ProductComplaintRoute: typeof ProductComplaintRoute
   ProductSampleproductRoute: typeof ProductSampleproductRoute
@@ -281,9 +544,13 @@ const ProductRouteRouteWithChildren = ProductRouteRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ChainRouteRoute: ChainRouteRouteWithChildren,
+  ManufacturerRouteRoute: ManufacturerRouteRouteWithChildren,
+  ProcessorRouteRoute: ProcessorRouteRouteWithChildren,
   ProductRouteRoute: ProductRouteRouteWithChildren,
-  AboutRoute: AboutRoute,
+  AdminloginRoute: AdminloginRoute,
+  WorkingRoute: WorkingRoute,
   KisanIndexRoute: KisanIndexRoute,
+  LabIndexRoute: LabIndexRoute,
   PptIndexRoute: PptIndexRoute,
 }
 export const routeTree = rootRouteImport

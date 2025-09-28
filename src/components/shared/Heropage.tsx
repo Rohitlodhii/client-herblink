@@ -1,5 +1,8 @@
-import AboutHerbLink from "./About"
+
+
+import About from "./About"
 import HeroBanner from "./herobanner"
+import HowItWorks from "./HowItWorks"
 
 
 
@@ -8,14 +11,22 @@ import HeroBanner from "./herobanner"
 
 const Heropage = () => {
   return (
-    <div className=" h-screen max-w-6xl mx-auto  w-full flex flex-col gap-2 px-4 pt-4">
+    <div className=" max-w-6xl mx-auto  w-full flex flex-col gap-2 px-4 pt-4">
    
       <div className="">
             <HeroBanner />
       </div>
       <div className="flex pb-4">
        
-       <AboutHerbLink/>
+       <About/>
+      
+     
+      </div>
+      <div className="flex pb-4">
+       
+       <HowItWorks/>
+      
+     
       </div>
     </div>
   )
