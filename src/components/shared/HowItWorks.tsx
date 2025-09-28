@@ -1,5 +1,7 @@
+import { useRouter } from "@tanstack/react-router"
 
 const HowItWorks = () => {
+    const router = useRouter();
   return (
     <section className="text-gray-700 body-font">
     <div className="container px-5 py-24 ">
@@ -8,6 +10,9 @@ const HowItWorks = () => {
           Trace every step of your herbs — from farm to consumer — with complete transparency and trust.
         </h1>
         <button
+        onClick={()=>router.navigate({
+            to:'/working'
+        })}
           className="flex-shrink-0 backdrop-blur-md bg-indigo-600 text-white 
                  px-8 py-3 rounded-xl text-lg font-medium shadow-md 
                  hover:bg-indigo-600 hover:shadow-lg transition-all duration-300 

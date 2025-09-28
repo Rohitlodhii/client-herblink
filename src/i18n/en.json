@@ -2,7 +2,7 @@
     "navbar" : {
         "accessBarHeaderLeft" : "Government of India",
         "accessBarRightSkipButton" : "Skip to main content",
-        "NavLoginBtn" : "Login",
+        "NavLoginBtn" : "Admin Login",
         "DDOrgs" : "Organisations",
         "ddorgs1" : "Farmers Portal",
         "ddorgs2" : "Processor Portal",

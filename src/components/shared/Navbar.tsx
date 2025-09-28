@@ -47,7 +47,9 @@ const Navbar = () => {
       <div className="h-20 shadow-md">
       <div className="flex items-center h-full justify-between max-w-[1116px] mx-auto px-4">
         {/* Left Logo */}
-        <div className="flex gap-1 items-center">
+        <div onClick={()=>router.navigate({
+          to:'/'
+        })} className="flex gap-1 items-center">
           <img src="/emblem.png" className="h-10 w-auto" />
           <img src="/ayush.png" width={40} className="h-10 w-auto" />
         </div>

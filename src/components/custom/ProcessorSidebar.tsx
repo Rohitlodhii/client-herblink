@@ -48,28 +48,21 @@ export function ProcessorRegistrationSidebar({ currentStep, completedSteps, onSt
   };
 
   return (
-    <div className="w-80 bg-gradient-card shadow-card rounded-xl p-6 h-fit">
+    <div className="w-80 rounded-xl p-6 h-fit">
       <div className="mb-6">
         <h2 className="text-xl font-bold text-foreground mb-2">Processor Registration</h2>
         <p className="text-sm text-muted-foreground">Complete all steps to finish registration</p>
       </div>
 
-      <div className="space-y-4">
-        {steps.map((step, index) => {
+      <div className="space-y-4 text-black">
+        {steps.map((step) => {
           const status = getStepStatus(step.id);
           const Icon = step.icon;
           const isClickable = completedSteps.includes(step.id) || step.id === currentStep;
 
           return (
             <div key={step.id} className="relative">
-              {index < steps.length - 1 && (
-                <div
-                  className={cn(
-                    "absolute left-6 top-12 w-0.5 h-8 transition-colors",
-                    completedSteps.includes(step.id) ? "bg-success" : "bg-border"
-                  )}
-                />
-              )}
+             
               
               <button
                 onClick={() => isClickable && onStepClick(step.id)}
@@ -87,11 +80,11 @@ export function ProcessorRegistrationSidebar({ currentStep, completedSteps, onSt
                       getStepStyles(status)
                     )}
                   >
-                    <Icon className="h-6 w-6" />
+                    <Icon className="h-6 w-6 text-black" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-sm mb-1">{step.title}</h3>
-                    <p className="text-xs opacity-90">{step.description}</p>
+                    <h3 className="font-semibold text-black text-sm mb-1">{step.title}</h3>
+                    <p className="text-xs text-black opacity-90">{step.description}</p>
                   </div>
                 </div>
               </button>
